@@ -1,0 +1,21 @@
+<head>
+    <title>blog-app</title>
+</head>
+
+<body>
+<h1>Welcome to Blog!</h1>
+
+{{> ArticleList}}
+
+</body>
+
+<template name="ArticleList">
+    <h2>Article List</h2>
+    {{date}}
+    <ul>
+        {{#each article in articles}}
+            <li>{{article.title}} - <a href="/{{article._id}}">View</a></li>
+        {{/each}}
+    </ul>
+</template>
+
